@@ -736,10 +736,9 @@
   </div>
 
     <button class="menu-toggle" aria-label="Toggle menu">
-  <span><a href="home.html">Home</a></span>
-  <span><a href="about.html">About Us</a></span>
-  <span><a href="creative_corner.html">Creative Corner</a></span>
-      <span><a href="hotline.html">Hotline</a></span>
+  <span></span>
+  <span></span>
+  <span></span>
 </button>
 
 
@@ -1005,10 +1004,10 @@ The <b>S.T.O.P B.A.D Program</b> stands for <i>Stand Together, Overcome the Pain
     const toggleBtn = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav.primary');
 
-    toggleBtn.addEventListener('click', () => {
-      nav.classList.toggle('show');
+     toggleBtn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('show');
+      toggleBtn.setAttribute('aria-expanded', isOpen);
     });
-
 
   </script>
 </body>
