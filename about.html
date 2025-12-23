@@ -500,10 +500,14 @@
   border-radius: 2px;
 }
 
-/* ---------- MOBILE FIXES ---------- */
+/* =====================================================
+   MOBILE STYLES – FINAL & CLEAN
+   ===================================================== */
 @media (max-width: 768px) {
 
+  /* ---------- HEADER & NAV ---------- */
   header {
+    position: relative;
     padding: 14px 18px;
   }
 
@@ -511,16 +515,34 @@
     gap: 10px;
   }
 
+  .logo-circle {
+    width: 42px;
+    height: 42px;
+  }
+
   .logo h1 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .logo p {
     font-size: 0.7rem;
+    line-height: 1.2;
   }
 
   .menu-toggle {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 26px;
+    height: 3px;
+    background: #023e8a;
+    border-radius: 2px;
   }
 
   nav.primary {
@@ -528,53 +550,175 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255,255,255,0.96);
     display: none;
     flex-direction: column;
-    padding: 12px 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
-
-  nav.primary a {
-    margin: 0;
-    padding: 14px;
-    text-align: center;
-    font-size: 1rem;
+    z-index: 2000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
   }
 
   nav.primary.show {
     display: flex;
   }
 
+  nav.primary a {
+    margin: 0;
+    padding: 14px;
+    text-align: center;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  /* ---------- PAGE LAYOUT ---------- */
+  body {
+    font-size: 14px;
+  }
+
   .page {
-    margin: 18px 12px;
+    margin: 16px 12px;
     padding: 18px;
   }
 
   .page-head {
     flex-direction: column;
     text-align: center;
+    gap: 12px;
+  }
+
+  .page-head h2 {
+    font-size: 1.3rem;
+  }
+
+  .page-sub {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
   }
 
   .page-head img {
-    max-width: 180px;
-    margin-top: 12px;
+    max-width: 140px;
   }
 
+  /* ---------- MISSION & VISION ---------- */
   .mv {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
+  .card {
+    padding: 16px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* ---------- TEAM ---------- */
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .team-card {
+    padding: 12px;
+  }
+
+  .team-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .team-card p {
+    font-size: 0.85rem;
+  }
+
+  /* ---------- CALENDAR & EVENTS ---------- */
   .split {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .calendar {
-    margin-bottom: 20px;
+    border-radius: 12px;
   }
 
+  .calendar .cal-head {
+    padding: 10px;
+  }
+
+  .cal-title {
+    font-size: 0.9rem;
+  }
+
+  .btn-ghost {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+  }
+
+  .weekdays {
+    font-size: 0.65rem;
+    padding: 6px;
+  }
+
+  .days {
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .day {
+    min-height: 36px;
+    padding: 5px;
+  }
+
+  .day .num {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+
+  .events {
+    padding: 14px;
+  }
+
+  .events h4 {
+    font-size: 1rem;
+  }
+
+  .event-list {
+    max-height: 220px;
+  }
+
+  .event-item {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .event-item .time {
+    font-size: 0.8rem;
+    min-width: 68px;
+  }
+
+  .event-item .desc {
+    font-size: 0.85rem;
+  }
+
+  /* ---------- CONTACT ---------- */
   .contact-section h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .contact-section p {
+    font-size: 0.9rem;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    font-size: 0.85rem;
+    margin: 32px 0 20px;
   }
 }
 
@@ -597,7 +741,7 @@
   <span></span>
 </button>
 
-    
+
     <nav class="primary" role="navigation" aria-label="Main Navigation">
       <a href="home.html">Home</a>
       <a href="about.html" aria-current="page">About Us</a>
