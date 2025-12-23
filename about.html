@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="icon" type="image/png" href="logo.png" />
   <title>About Us – S.T.O.P B.A.D Program</title>
 
   <!-- Fonts & Icons -->
@@ -484,52 +483,72 @@
       height: 40px;
     }
 
-    @media (max-width: 768px) {
+    /* ---------- MOBILE NAV ---------- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
-  /* ----- HEADER ----- */
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: #023e8a;
+  border-radius: 2px;
+}
+
+/* ---------- MOBILE FIXES ---------- */
+@media (max-width: 768px) {
+
   header {
-    flex-direction: column;
     padding: 14px 18px;
-    gap: 14px;
-    text-align: center;
   }
 
   .logo {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .logo-circle {
-    width: 52px;
-    height: 52px;
+    gap: 10px;
   }
 
   .logo h1 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   .logo p {
-    font-size: 0.75rem;
-    line-height: 1.3;
+    font-size: 0.7rem;
+  }
+
+  .menu-toggle {
+    display: flex;
   }
 
   nav.primary {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    display: none;
+    flex-direction: column;
+    padding: 12px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
 
   nav.primary a {
     margin: 0;
-    font-size: 0.95rem;
-    padding: 6px 10px;
+    padding: 14px;
+    text-align: center;
+    font-size: 1rem;
   }
 
-  /* ----- PAGE CONTAINER ----- */
+  nav.primary.show {
+    display: flex;
+  }
+
   .page {
-    margin: 22px 12px;
-    padding: 20px 16px;
+    margin: 18px 12px;
+    padding: 18px;
   }
 
   .page-head {
@@ -539,44 +558,13 @@
 
   .page-head img {
     max-width: 180px;
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
-  .page-head h2 {
-    font-size: 1.6rem;
-  }
-
-  .page-sub {
-    font-size: 0.95rem;
-  }
-
-  /* ----- MISSION & VISION ----- */
   .mv {
     grid-template-columns: 1fr;
   }
 
-  .card {
-    padding: 18px;
-  }
-
-  .card h3 {
-    font-size: 1.1rem;
-  }
-
-  .card p {
-    font-size: 0.95rem;
-  }
-
-  /* ----- TEAM ----- */
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .team-card {
-    padding: 14px;
-  }
-
-  /* ----- CALENDAR + EVENTS ----- */
   .split {
     grid-template-columns: 1fr;
   }
@@ -585,53 +573,11 @@
     margin-bottom: 20px;
   }
 
-  .weekdays,
-  .days {
-    gap: 6px;
-    padding: 8px;
-  }
-
-  .day {
-    min-height: 42px;
-    padding: 6px;
-    font-size: 0.85rem;
-  }
-
-  .day .num {
-    width: 28px;
-    height: 28px;
-    font-size: 0.85rem;
-  }
-
-  .events {
-    padding: 14px;
-  }
-
-  .event-item {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .event-item .time {
-    min-width: auto;
-    font-size: 0.9rem;
-  }
-
-  /* ----- CONTACT ----- */
   .contact-section h3 {
-    font-size: 1.6rem;
-  }
-
-  .contact-section p {
-    font-size: 0.95rem;
-  }
-
-  /* ----- FOOTER ----- */
-  footer {
-    font-size: 0.85rem;
-    padding: 10px 12px;
+    font-size: 1.5rem;
   }
 }
+
   </style>
 </head>
 
@@ -645,6 +591,13 @@
     </div>
   </div>
 
+    <button class="menu-toggle" aria-label="Toggle menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+    
     <nav class="primary" role="navigation" aria-label="Main Navigation">
       <a href="home.html">Home</a>
       <a href="about.html" aria-current="page">About Us</a>
@@ -682,7 +635,7 @@ The <b>S.T.O.P B.A.D Program</b> stands for <i>Stand Together, Overcome the Pain
     <section class="team" aria-labelledby="teamTitle">
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <h3 id="teamTitle" style="margin:0; color:var(--brand-blue);">Meet the Team</h3>
-        <div style="color:var(--muted); font-weight:600;">(Scholars & Coordinators)</div>
+        <div style="color:var(--muted); font-weight:600;">Scholars & Coordinators</div>
       </div>
 
         <div class="team-grid" role="list">
@@ -705,7 +658,7 @@ The <b>S.T.O.P B.A.D Program</b> stands for <i>Stand Together, Overcome the Pain
     <div class="team-card" role="listitem" aria-label="Janella Marie A. Francisco">
       <div class="member-info">
         <h4>Janella Marie A. Francisco</h4>
-        <p>Program Scholar</p>
+        <p>CENTREX Scholar</p>
       </div>
     </div>
 
@@ -902,6 +855,16 @@ The <b>S.T.O.P B.A.D Program</b> stands for <i>Stand Together, Overcome the Pain
 
       document.getElementById('year').textContent = (new Date()).getFullYear();
     })();
+
+
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav.primary');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+
+
   </script>
 </body>
 </html>
