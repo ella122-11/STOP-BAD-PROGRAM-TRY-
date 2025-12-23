@@ -483,6 +483,155 @@
       width: 40px;
       height: 40px;
     }
+
+    @media (max-width: 768px) {
+
+  /* ----- HEADER ----- */
+  header {
+    flex-direction: column;
+    padding: 14px 18px;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .logo {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .logo-circle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .logo h1 {
+    font-size: 1.15rem;
+  }
+
+  .logo p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+
+  nav.primary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  nav.primary a {
+    margin: 0;
+    font-size: 0.95rem;
+    padding: 6px 10px;
+  }
+
+  /* ----- PAGE CONTAINER ----- */
+  .page {
+    margin: 22px 12px;
+    padding: 20px 16px;
+  }
+
+  .page-head {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .page-head img {
+    max-width: 180px;
+    margin-top: 10px;
+  }
+
+  .page-head h2 {
+    font-size: 1.6rem;
+  }
+
+  .page-sub {
+    font-size: 0.95rem;
+  }
+
+  /* ----- MISSION & VISION ----- */
+  .mv {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  /* ----- TEAM ----- */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    padding: 14px;
+  }
+
+  /* ----- CALENDAR + EVENTS ----- */
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar {
+    margin-bottom: 20px;
+  }
+
+  .weekdays,
+  .days {
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .day {
+    min-height: 42px;
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+
+  .day .num {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+
+  .events {
+    padding: 14px;
+  }
+
+  .event-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .event-item .time {
+    min-width: auto;
+    font-size: 0.9rem;
+  }
+
+  /* ----- CONTACT ----- */
+  .contact-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .contact-section p {
+    font-size: 0.95rem;
+  }
+
+  /* ----- FOOTER ----- */
+  footer {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+  }
+}
   </style>
 </head>
 
