@@ -545,29 +545,35 @@
     border-radius: 2px;
   }
 
+  /* Mobile Navigation */
   nav.primary {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background: rgba(255,255,255,0.96);
-    display: none;
+    display: none;        /* Hidden by default */
     flex-direction: column;
     z-index: 2000;
     box-shadow: 0 10px 20px rgba(0,0,0,0.12);
   }
 
   nav.primary.show {
-    display: flex;
+    display: flex;        /* Show when toggle is clicked */
   }
 
   nav.primary a {
-    margin: 0;
     padding: 14px;
     text-align: center;
     font-size: 0.95rem;
     border-bottom: 1px solid rgba(0,0,0,0.05);
+    color: #023e8a;
+    font-weight: 600;
+    text-decoration: none;
   }
+
+  nav.primary a:hover {
+    color: #0077b6;
 
   /* ---------- PAGE LAYOUT ---------- */
   body {
@@ -1004,7 +1010,7 @@ The <b>S.T.O.P B.A.D Program</b> stands for <i>Stand Together, Overcome the Pain
     const toggleBtn = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav.primary');
 
-     toggleBtn.addEventListener('click', () => {
+    toggleBtn.addEventListener('click', () => {
       const isOpen = nav.classList.toggle('show');
       toggleBtn.setAttribute('aria-expanded', isOpen);
     });
